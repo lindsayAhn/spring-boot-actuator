@@ -1,0 +1,32 @@
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-origins: http://test/com, http://test2.com
+        allowed-headers: GET
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-components: ALWAYS
+      show-details: ALWAYS
+    env:
+      show-values: ALWAYS
+  info:
+    os:
+      enabled: true
+    java:
+      enabled: true
+    env:
+      enabled: true
+    git:
+      mode: "full"
+info:
+  my-app-name:
+    any-value: someValue
+    group-id: "@project.groupId@"
+    artifact-id: "@project.artifactId@"
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      version: "@java.version@"
+    made-by: developerY
